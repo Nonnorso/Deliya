@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Cupcakelogo from './assets/Cupcake.png'
+import Cupcakelogo from '../assets/Cupcake.png'
 import Cakelogo from '/cake.png'
-import './App.css'
+import '../styles/HomePage.css'
 
 function App() {
   const [count, setCount] = useState(0)
