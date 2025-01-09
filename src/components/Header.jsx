@@ -4,7 +4,7 @@ import '../styles/Header.css';
 
 const Header = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 880);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1004);
   
     const toggleMenu = useCallback(() => {
       setMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
@@ -22,7 +22,7 @@ const Header = () => {
   
     useEffect(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 880);
+        setIsMobile(window.innerWidth < 1004);
       };
   
       window.addEventListener('resize', handleResize);
@@ -58,7 +58,7 @@ const Header = () => {
               <li><NavLink to="/" onClick={() => handleNavigate('/')} activeclassname="active">Accueil</NavLink></li>
               <li><NavLink to="/About" onClick={() => handleNavigate('/about')} activeclassname="active">À propos</NavLink></li>
               <li><NavLink to="/Vitrine" onClick={() => handleNavigate('/Vitrine')} activeclassname="active">Vitrine</NavLink></li>
-              <li><NavLink to="/Tarif&Prestations" onClick={() => handleNavigate('/Tarif&Prestations')} activeclassname="active">Tarifs et prestations</NavLink></li>
+              <li><NavLink to="/Tarifs&Prestations" onClick={() => handleNavigate('/Tarifs&Prestations')} activeclassname="active">Tarifs et prestations</NavLink></li>
             </ul>
           </div>
         )}
@@ -80,7 +80,8 @@ const Header = () => {
             <ul>
               <li><Link to="/" onClick={() => { handleNavigate('/'); closeMenu(); }}>Accueil</Link></li>
               <li><Link to="/about" onClick={() => { handleNavigate('/about'); closeMenu(); }}>À propos</Link></li>
-              <li><Link to="/portfolio" onClick={() => { handleNavigate('/portfolio'); closeMenu(); }}>Portfolio</Link></li>
+              <li><Link to="/Vitrine" onClick={() => { handleNavigate('/Vitrine'); closeMenu(); }}>Vitrine</Link></li>
+              <li><Link to="/Tarifs&Prestations" onClick={() => { handleNavigate('/Tarifs&Prestations'); closeMenu(); }}>Tarifs et prestations</Link></li>
             </ul>
           </nav>
         ) : null}

@@ -9,7 +9,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 1000;
   }
-  @media (max-width: 880px) {
+  @media (max-width: 1004px) {
     .header-container {
       padding-right: 30px;
       padding-left: 30px;
@@ -61,8 +61,7 @@
     overflow: hidden;
     position: absolute;
     top: 75%;
-    right: 10px;
-    width: 80px;
+    right: -25px;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0px 2px 5px rgb(0, 0, 0);
     transform-origin: top center;
@@ -102,7 +101,7 @@
     flex-direction: row;
     list-style: none;
     gap: 60px;
-    padding-top: 5px;
+    padding-top:25px;
   }
   
   .DesktopNav a:hover {
